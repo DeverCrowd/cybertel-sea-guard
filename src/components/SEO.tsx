@@ -2,6 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
+// Add safety check for window object
+const isBrowser = typeof window !== 'undefined';
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -25,7 +28,12 @@ export const SEO: React.FC<SEOProps> = ({
   const defaultDescription = t('heroTitle');
   const siteTitle = title ? `${title} | CyberTelos` : defaultTitle;
   const siteDescription = description || defaultDescription;
-  const currentUrl = url || window.location.href;
+  const currentUrl = url || (isBrowser ? window.location.href : '');
+
+  // Return null if not in browser environment to prevent SSR issues
+  if (!isBrowser) {
+    return null;
+  }
 
   return (
     <Helmet>

@@ -23,36 +23,41 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              {/* Public routes */}
-              <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
-              <Route path="/services" element={<PublicLayout><Services /></PublicLayout>} />
-              <Route path="/about" element={<PublicLayout><div>About Coming Soon</div></PublicLayout>} />
-              <Route path="/case-studies" element={<PublicLayout><div>Case Studies Coming Soon</div></PublicLayout>} />
-              <Route path="/testimonials" element={<PublicLayout><div>Testimonials Coming Soon</div></PublicLayout>} />
-              <Route path="/blog" element={<PublicLayout><div>Blog Coming Soon</div></PublicLayout>} />
-              <Route path="/contact" element={<PublicLayout><div>Contact Coming Soon</div></PublicLayout>} />
-              
-              {/* Dashboard routes */}
-              <Route path="/dashboard" element={<div>Dashboard Coming Soon</div>} />
-              <Route path="/dashboard/login" element={<div>Login Coming Soon</div>} />
-              
-              {/* Catch-all route */}
-              <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+const App = () => {
+  // Initialize helmet provider context with proper configuration
+  const helmetContext = {};
+
+  return (
+    <HelmetProvider context={helmetContext}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <Routes>
+                {/* Public routes */}
+                <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
+                <Route path="/services" element={<PublicLayout><Services /></PublicLayout>} />
+                <Route path="/about" element={<PublicLayout><div>About Coming Soon</div></PublicLayout>} />
+                <Route path="/case-studies" element={<PublicLayout><div>Case Studies Coming Soon</div></PublicLayout>} />
+                <Route path="/testimonials" element={<PublicLayout><div>Testimonials Coming Soon</div></PublicLayout>} />
+                <Route path="/blog" element={<PublicLayout><div>Blog Coming Soon</div></PublicLayout>} />
+                <Route path="/contact" element={<PublicLayout><div>Contact Coming Soon</div></PublicLayout>} />
+                
+                {/* Dashboard routes */}
+                <Route path="/dashboard" element={<div>Dashboard Coming Soon</div>} />
+                <Route path="/dashboard/login" element={<div>Login Coming Soon</div>} />
+                
+                {/* Catch-all route */}
+                <Route path="*" element={<PublicLayout><NotFound /></PublicLayout>} />
+              </Routes>
+            </BrowserRouter>
+          </TooltipProvider>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;
