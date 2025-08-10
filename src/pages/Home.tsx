@@ -75,11 +75,11 @@ export const Home: React.FC = () => {
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center bg-gradient-surface overflow-hidden">
           {/* Background Image */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 bg-black">
             <img 
               src={heroImage} 
               alt="Maritime cybersecurity operations"
-              className="w-full h-full object-cover opacity-20"
+              className="w-full h-full object-cover opacity-50"
             />
             <div className="absolute inset-0 bg-gradient-ocean opacity-10"></div>
           </div>
@@ -87,25 +87,25 @@ export const Home: React.FC = () => {
           {/* Content */}
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-                <span className="bg-gradient-ocean bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-ocean bg-clip-text text-white">
                   {t('heroTitle')}
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed max-w-3xl mx-auto">
                 {t('heroSubtitle')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button variant="hero" size="xl" asChild>
+                <Button variant="glass" size="xl" asChild>
                   <Link to="/contact">
                     {t('requestConsultation')}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 
-                <Button variant="glass" size="xl" asChild>
+                <Button variant="cyber" size="xl" asChild>
                   <Link to="/services">
                     {t('learnMore')}
                   </Link>
@@ -117,12 +117,12 @@ export const Home: React.FC = () => {
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
-                      <stat.icon className="h-8 w-8 text-primary" />
+                      <stat.icon className="h-8 w-8 text-sky-500" />
                     </div>
-                    <div className="text-2xl md:text-3xl font-bold text-foreground">
+                    <div className="text-2xl md:text-3xl font-bold text-white">
                       {stat.number}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-white/50">
                       {stat.label}
                     </div>
                   </div>
@@ -236,14 +236,14 @@ export const Home: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Secure Your Maritime Operations?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Get a free cybersecurity assessment and discover how we can protect your fleet from evolving digital threats.
             </p>
             <Button variant="glass" size="xl" asChild>
-              <Link to="/contact" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
+              <Link to="/contact" className="text-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
                 {t('requestConsultation')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

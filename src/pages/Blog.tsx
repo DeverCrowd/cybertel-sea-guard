@@ -309,19 +309,19 @@ export const Blog: React.FC = () => {
         {/* Newsletter CTA */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Stay Updated on Maritime Cybersecurity
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter for the latest insights, threat intelligence, and best practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <Input 
                 type="email" 
                 placeholder="Enter your email"
-                className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground placeholder:text-primary-foreground/70"
+                className="bg-foreground/10 border-foreground/30 text-foreground placeholder:text-foreground/70"
               />
-              <Button variant="glass" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/20">
+              <Button variant="cyber" className="text-foreground border-foreground/30 hover:bg-primary-foreground/20">
                 Subscribe
               </Button>
             </div>

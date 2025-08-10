@@ -44,11 +44,11 @@ export const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-ocean rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">CT</span>
+            <div className="w-8 h-8 bg-foreground rounded-lg flex items-center justify-center">
+              <span className="text-sky-500 font-bold">CT</span>
             </div>
-            <span className="text-xl font-bold bg-gradient-ocean bg-clip-text text-transparent">
-              CyberTelos
+            <span className="text-xl font-bold bg-foreground bg-clip-text text-transparent">
+              <span className='text-sky-500'>Cyber</span>Telos
             </span>
           </Link>
 
@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
             </Button>
 
             {/* Language toggle */}
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={toggleLanguage}
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
               <span className="sr-only">
                 {isRTL ? 'English' : 'العربية'}
               </span>
-            </Button>
+            </Button> */}
 
             {/* Dashboard link */}
             <Button variant="cyber" size="sm" asChild>

@@ -1,9 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Star, Quote, Shield, Anchor, Building, Users } from 'lucide-react';
+import { Star, Quote, Shield, Anchor, Building, Users, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
 
 export const Testimonials: React.FC = () => {
   const { t } = useTranslation();
@@ -217,19 +218,24 @@ export const Testimonials: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Join Our Satisfied Clients?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Experience the same level of protection and service that has earned us these outstanding reviews.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary-foreground/10 text-primary-foreground border border-primary-foreground/30 hover:bg-primary-foreground/20 px-8 py-3 rounded-lg font-medium transition-wave">
-                {t('requestConsultation')}
-              </button>
-              <button className="border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-3 rounded-lg font-medium transition-wave">
-                View Case Studies
-              </button>
+              <Button variant="glass" size="xl" asChild>
+                <a href="/contact" className="text-primary border-primary-foreground/30 hover:bg-primary-foreground/10">
+                  {t('requestConsultation')}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="cyber" size="xl" asChild className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10">
+                <a href="/services">
+                  View Our Services
+                </a>
+              </Button>
             </div>
           </div>
         </section>

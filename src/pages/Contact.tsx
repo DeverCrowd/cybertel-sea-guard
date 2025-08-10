@@ -205,12 +205,12 @@ export const Contact: React.FC = () => {
                     <Button 
                       type="submit" 
                       className="w-full" 
-                      variant="hero"
+                      variant="cyber"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary-foreground mr-2"></div>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-foreground mr-2"></div>
                           Sending...
                         </>
                       ) : (
@@ -282,17 +282,17 @@ export const Contact: React.FC = () => {
         {/* Emergency Contact */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Cybersecurity Emergency?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               For immediate assistance with active cyber threats, contact our 24/7 emergency response team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 variant="glass" 
                 size="xl" 
-                className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/20"
+                className="text-foreground border-foreground/30 hover:bg-foreground/20"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Emergency Hotline: +1 (555) 911-CYBER
@@ -300,7 +300,7 @@ export const Contact: React.FC = () => {
               <Button 
                 variant="outline" 
                 size="xl" 
-                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+                className="border-foreground/30 text-foreground hover:bg-foreground/10"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 emergency@cybertelos.com

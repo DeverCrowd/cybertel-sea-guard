@@ -227,20 +227,20 @@ export const CaseStudies: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Become Our Next Success Story?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Join hundreds of maritime organizations that trust CyberTelos to protect their operations from cyber threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="glass" size="xl" asChild>
-                <a href="/contact" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
+                <a href="/contact" className="text-primary border-primary-foreground/30 hover:bg-primary-foreground/10">
                   {t('requestConsultation')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="cyber" size="xl" asChild className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10">
                 <a href="/services">
                   View Our Services
                 </a>

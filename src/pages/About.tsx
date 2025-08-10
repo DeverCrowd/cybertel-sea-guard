@@ -102,8 +102,8 @@ export const About: React.FC = () => {
               <Card className="shadow-card-enhanced">
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-ocean rounded-lg flex items-center justify-center">
-                      <Shield className="h-6 w-6 text-primary-foreground" />
+                    <div className="w-12 h-12 bg-gradient-cyber rounded-lg flex items-center justify-center">
+                      <Shield className="h-6 w-6 text-foreground" />
                     </div>
                     <CardTitle className="text-2xl">Vision</CardTitle>
                   </div>
@@ -159,7 +159,7 @@ export const About: React.FC = () => {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-ocean rounded-lg flex items-center justify-center">
-                  <Users className="h-6 w-6 text-primary-foreground" />
+                  <Users className="h-6 w-6 text-foreground" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground">{t('leadership')}</h2>
               </div>
@@ -204,13 +204,13 @@ export const About: React.FC = () => {
         {/* Contact CTA */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Work with Industry Leaders?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Contact our expert team to discuss how CyberTelos can protect your maritime operations.
             </p>
-            <Button variant="glass" size="xl" asChild>
+            <Button variant="cyber" size="xl" asChild>
               <a href="/contact" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
                 {t('contactUs')}
               </a>

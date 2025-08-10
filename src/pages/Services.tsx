@@ -113,7 +113,7 @@ export const Services: React.FC = () => {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
                 Comprehensive protection solutions designed specifically for the maritime industry's unique cybersecurity challenges and operational requirements.
               </p>
-              <Button variant="hero" size="lg" asChild>
+              <Button variant="glass" size="lg" asChild>
                 <Link to="/contact">
                   {t('requestConsultation')}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -224,20 +224,20 @@ export const Services: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-ocean">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Ready to Strengthen Your Maritime Security?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/90 mb-8 max-w-2xl mx-auto">
               Contact our maritime cybersecurity experts to discuss your specific requirements and develop a customized protection strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="glass" size="xl" asChild>
-                <Link to="/contact" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
+                <Link to="/contact" className="text-foreground border-primary-foreground/30 hover:bg-primary-foreground/10">
                   {t('requestConsultation')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="xl" asChild className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+              <Button variant="cyber" size="xl" asChild className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10">
                 <Link to="/case-studies">
                   View Case Studies
                 </Link>
