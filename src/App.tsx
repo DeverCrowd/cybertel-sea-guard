@@ -9,6 +9,11 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Home } from './pages/Home';
 import { Services } from './pages/Services';
+import { About } from './pages/About';
+import { CaseStudies } from './pages/CaseStudies';
+import { Testimonials } from './pages/Testimonials';
+import { Blog } from './pages/Blog';
+import { Contact } from './pages/Contact';
 import NotFound from "./pages/NotFound";
 import '@/lib/i18n';
 
@@ -38,12 +43,12 @@ const App = () => {
               <Routes>
                 {/* Public routes */}
                 <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
-                <Route path="/services" element={<PublicLayout><Services /></PublicLayout>} />
-                <Route path="/about" element={<PublicLayout><div>About Coming Soon</div></PublicLayout>} />
-                <Route path="/case-studies" element={<PublicLayout><div>Case Studies Coming Soon</div></PublicLayout>} />
-                <Route path="/testimonials" element={<PublicLayout><div>Testimonials Coming Soon</div></PublicLayout>} />
-                <Route path="/blog" element={<PublicLayout><div>Blog Coming Soon</div></PublicLayout>} />
-                <Route path="/contact" element={<PublicLayout><div>Contact Coming Soon</div></PublicLayout>} />
+              <Route path="/services" element={<PublicLayout><Services /></PublicLayout>} />
+              <Route path="/about" element={<PublicLayout><About /></PublicLayout>} />
+              <Route path="/case-studies" element={<PublicLayout><CaseStudies /></PublicLayout>} />
+              <Route path="/testimonials" element={<PublicLayout><Testimonials /></PublicLayout>} />
+              <Route path="/blog" element={<PublicLayout><Blog /></PublicLayout>} />
+              <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
                 
                 {/* Dashboard routes */}
                 <Route path="/dashboard" element={<div>Dashboard Coming Soon</div>} />
